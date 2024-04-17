@@ -1,7 +1,6 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Home from './layout/Home';
 import Pokemon from './layout/Pokemon';
-import Poke from './layout/Poke';
 import Menu from './components/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from './layout/NotFound';
@@ -14,7 +13,6 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/pokemon' element={<Pokemon/>}/>
-      <Route path='/poke:name' element={<Poke/>}/>
       <Route path='*' element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
