@@ -8,7 +8,7 @@ import React from 'react'
   return (
     <Container>
       <Row className="text-center">
-        <h1>Poke page</h1>
+        <p>Poke page</p>
       </Row>
     </Container>
   )
