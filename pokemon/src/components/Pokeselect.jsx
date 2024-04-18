@@ -11,14 +11,21 @@ import { MiContexto } from "../context/myContext"
 import { useNavigate } from 'react-router-dom'
 
 const Pokeselect = () => {
+
+  //01 guardo el pokemon seleccionado
   const [selectedPokemon, setSelectedPokemon] = useState("")
+  
+  //traigo los datos del fecth
   const pokemon = useContext(MiContexto)
+  
   const navigate = useNavigate()
 
+  //01 selecciono del select el pokemon y lo guardo en el estado
   const handleSelectChange = (event) => {
     setSelectedPokemon(event.target.value)
   };
 
+  //pego el pokemon a la url
   const handleClik = () => {
     if(selectedPokemon.trim() === '')return
     navigate(`/details/${selectedPokemon}`)

@@ -1,12 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import Poke from "../components/Poke";
 import Pokeselect from "../components/Pokeselect";
 
+
+
 export default function Pokemon() {
-
-
 
   return (
     <>
@@ -15,7 +14,7 @@ export default function Pokemon() {
           <Pokeselect />
         </Row>
         <Row>
-          <Poke />
+          <p>pag pokemon</p>
         </Row>
       </Container>
     </>
