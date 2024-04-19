@@ -9,6 +9,7 @@ import pika from '../public/25.png'
 
 
 function Menu() {
+  //Asignación de la clase active ara el navlink
 const handleMenu = ({isActive}) => isActive ? 'nav-item nav-link active' : 'nav-item nav-link'
 
     return (

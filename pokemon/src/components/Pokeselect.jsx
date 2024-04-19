@@ -25,7 +25,7 @@ const Pokeselect = () => {
     setSelectedPokemon(event.target.value)
   };
 
-  //pego el pokemon a la url
+  //pego el pokemon a la url con hook useNavigate
   const handleClik = () => {
     if(selectedPokemon.trim() === '')return
     navigate(`/pokemon/details/${selectedPokemon}`)

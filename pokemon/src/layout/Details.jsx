@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Pokeselect from "../components/Pokeselect";
 import "./Details.css"
 
 import { useEffect } from "react";
@@ -10,6 +9,8 @@ import { useParams } from "react-router-dom";
 
 export default function Details() {
   const [pokemon, setPokemon] = useState()
+
+  //Obtengo parametro de la url usando el hook useParams
   const { name } = useParams()
 
 
@@ -28,6 +29,8 @@ export default function Details() {
   console.log(pokemon)
   return (
     <Container>
+      <Row>
+      </Row>
       <Row className="border p-3 m-3 mt-5">
         <Col className="text-end">
           {pokemon?.sprites && (
