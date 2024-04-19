@@ -28,7 +28,7 @@ export default function Details() {
   return (
     <Container>
       <Row className="mt-5 text-center mb-5">
-        <h1>El poke es: {name}</h1>
+        <h1>{name}</h1>
         {pokemon?.sprites && (
             <div className="mt-5" >
               <img className="imgG" src={pokemon.sprites.other.dream_world.front_default} alt={name} /> 

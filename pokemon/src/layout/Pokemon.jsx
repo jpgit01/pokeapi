@@ -10,11 +10,12 @@ export default function Pokemon() {
   return (
     <>
       <Container>
-        <Row className="mt-5">
-          <Pokeselect />
+        <Row className="mt-5 text-center">
+
+          <h2>Selecciona un Pokemón</h2>
         </Row>
         <Row>
-          <p>pag pokemon</p>
+        <Pokeselect />
         </Row>
       </Container>
     </>

@@ -28,12 +28,12 @@ const Pokeselect = () => {
   //pego el pokemon a la url
   const handleClik = () => {
     if(selectedPokemon.trim() === '')return
-    navigate(`/details/${selectedPokemon}`)
+    navigate(`/pokemon/details/${selectedPokemon}`)
   };
 
   return (
     <Container>
-      <Row className="mt-5">
+      <Row className="mt-3">
         <Form.Select
           aria-label="Default select example"
           value={selectedPokemon}
