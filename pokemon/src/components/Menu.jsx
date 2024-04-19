@@ -4,6 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import {NavLink} from 'react-router-dom';
 import './Menu.css'
 import * as Icon from 'react-bootstrap-icons';
+import pika from '../public/25.png'
+
 
 
 function Menu() {
@@ -12,7 +14,9 @@ const handleMenu = ({isActive}) => isActive ? 'nav-item nav-link active' : 'nav-
     return (
       <Navbar expand="lg"  bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/"><Icon.VinylFill size={50}/></Navbar.Brand>
+          <Navbar.Brand href="/"><Icon.VinylFill size={50}/>
+          <img className='imgPika' src={pika}/>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

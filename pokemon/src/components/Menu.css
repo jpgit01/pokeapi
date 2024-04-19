@@ -1,3 +1,8 @@
 .active{
     color: red !important;
 }
+
+.imgPika{
+    width: 110px;
+    height: auto;
+}
