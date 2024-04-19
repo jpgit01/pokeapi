@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Pokeselect from "../components/Pokeselect";
 import "./Details.css"
 
@@ -27,23 +28,25 @@ export default function Details() {
   console.log(pokemon)
   return (
     <Container>
-      <Row className="mt-5 text-center mb-5">
-        <h1>{name}</h1>
-        {pokemon?.sprites && (
+      <Row className="border p-3 m-3 mt-5">
+        <Col className="text-end">
+          {pokemon?.sprites && (
             <div className="mt-5" >
-              <img className="imgG" src={pokemon.sprites.other.dream_world.front_default} alt={name} /> 
+              <img className="imgG" src={pokemon.sprites.other.dream_world.front_default} alt={name} />
             </div>
           )}
-        <div className="text-center mt-5">
-          <h3>Habilidades</h3>
-          {pokemon?.abilities && pokemon.abilities.map((poke, index) => (
-            <div key={index}>
-              {poke.ability.name}
-            </div>
+        </Col>
+        <Col>
+          <h3>{name}</h3>
+          <ul>
+          {pokemon?.stats && pokemon.stats.map((stats, index) => (
+            <li key={index}>
+              {stats.stat.name}: {stats.base_stat}
+            </li>
           ))}
+          </ul>
 
-        </div>
-
+        </Col>
       </Row>
     </Container>
   );
